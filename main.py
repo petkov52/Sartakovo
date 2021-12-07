@@ -1,16 +1,46 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+class Pet:
+        """ Домашнее животное """
+        legs = 4
+        has_tail = True
+
+        def inspect(self):
+            print('Всего ног:', self.legs)
+            print('Хвост присутствует -', 'да' if self.has_tail else 'нет')
+
+class Cat(Pet):
+        """ Кошка - является Домашним Животным """
+
+        def sound(self):
+            print('Мяу!')
+
+class Dog(Pet):
+        """ Собака - является Домашним Животным """
+
+        def sound(self):
+            print('Гав!')
+
+class Hamster(Pet):
+        """ Хомячок - является Домашним Животным """
+
+        def sound(self):
+            print('Ццццццц!')  # https://goo.gl/KXoj21
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+print("Котик")
+
+
+My_pet = Cat
+my_pet = My_pet()
+my_pet.legs = 5
+my_pet.has_tail = False
+my_pet.inspect()
+my_pet.sound()
+
+my_pet = Dog()
+
+my_pet.inspect()
+
