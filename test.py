@@ -4,18 +4,18 @@ PI = math.pi
 
 
 def inner_radius():
-    a = float(input('Внутренний диаметр цилиндра в см: '))
+    a = float(input('Внутренний диаметр цилиндра в мм: '))
     r = a / 2
     return r
 
 
 def outer_radious():
-    a = float(input('Внешний диаметр цилиндра в см: '))
+    a = float(input('Внешний диаметр цилиндра в мм: '))
     r = a / 2
     return r
 
 def height():
-    h = float(input('Высота цилиндра в см:  '))
+    h = float(input('Высота цилиндра в мм:  '))
     return h
 
 
@@ -28,12 +28,12 @@ def volume():
     outer_s = PI*outer_rad**2
     s=outer_s-inner_s
     v= s * h
-    return round(v/1000,1)
+    return round(v/1000000,2)
 
 
 
 def mass(g):
-    m = 0.5
+    m = 0.55
     result = (round(m*g,1),g)
 
     return' Масса угля в кг:',result[0],'Объем цилиндра в литрах:',result[1]
