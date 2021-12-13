@@ -33,7 +33,7 @@ def volume():
 
 
 def mass(g):
-    m = 0.55
+    m = 0.48
     result = (round(m*g,1),g)
 
     return' Масса угля в кг:',result[0],'Объем цилиндра в литрах:',result[1]
